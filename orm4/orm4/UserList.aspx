@@ -47,7 +47,7 @@
                 <tr>
                     <td></td>
                     <td><input id="userName" runat="server" value="<%# BindItem.UserName %>" /></td>
-                    <td><input id="userRegDate" runat="server" value="<%# DateTime.UtcNow.ToShortDateString() %>" /></td>
+                    <td><%# DateTime.UtcNow.ToShortDateString() %></td>
                     <td><input id="birthDate" runat="server" value="<%# BindItem.BirthDate %>" /></td>
                     <td>
                         <asp:Button ID="Button1" CommandName="Insert" runat="server" Text="Вставить" />
