@@ -47,10 +47,8 @@
                 <tr>
                     <td></td>
                     <td><input id="userName" runat="server" value="<%# BindItem.UserName %>" /></td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="userName"></asp:RequiredFieldValidator>
                     <td><input id="userRegDate" runat="server" value="<%# DateTime.UtcNow.ToShortDateString() %>" /></td>
                     <td><input id="birthDate" runat="server" value="<%# BindItem.BirthDate %>" /></td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="birthDate"></asp:RequiredFieldValidator>
                     <td>
                         <asp:Button ID="Button1" CommandName="Insert" runat="server" Text="Вставить" />
                     </td>
