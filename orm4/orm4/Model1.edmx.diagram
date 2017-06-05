@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04a40a57c0334f65b9b914bf26dbbd50" Name="Diagram1">
+        <EntityTypeShape EntityType="LibNetModel.Author" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.Book" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.BookAuthor" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.BookPurchase" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.BookRent" Width="1.5" PointX="6" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.Library" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.UserInfo" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibNetModel.BookLocation" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="LibNetModel.FK_BookAuthor_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookAuthor_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookLocation_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookPurchase_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookRent_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookPurchase_Library" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookRent_Lib" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookRent_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibNetModel.FK_BookRent_Library" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LibNetModel.AdminInfo" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
