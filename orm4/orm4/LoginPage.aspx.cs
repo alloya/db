@@ -9,8 +9,6 @@ namespace orm4
 {
 	public partial class LoginPage : System.Web.UI.Page
 	{
-		LibNetEntities dbContext;
-
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			
@@ -18,14 +16,7 @@ namespace orm4
 
 		protected void ValidateUser(object sender, AuthenticateEventArgs e)
 		{
-			if (!IsMatches(Login1.UserName, Login1.Password))
-			{
-				Login1.InstructionText = "Login or password incorrect.";
-			}
-			else
-			{
-				Login1.InstructionText = "Success.";
-			}
+			e.Authenticated = IsMatches(Login1.UserName, Login1.Password);
 		}
 
 		private bool IsMatches(string userName, string password)
