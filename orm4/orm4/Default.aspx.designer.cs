@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace orm4.ASPX {
+namespace orm4 {
     
     
     public partial class Default {
