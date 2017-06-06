@@ -29,3 +29,13 @@ textarea {
         padding: 0;
     }
 }
+
+button[type=submit] {
+    margin-top: 15px;
+    padding: 5px;
+}
+
+#ListView1 label {
+    width: 120px;
+    display: inline-block;
+}
