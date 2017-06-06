@@ -25,6 +25,7 @@ namespace orm4
     
         public long BookID { get; set; }
         public string BookName { get; set; }
+        public Nullable<int> PublishYear { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookAuthor> BookAuthor { get; set; }

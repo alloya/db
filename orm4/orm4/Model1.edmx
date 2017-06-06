@@ -28,6 +28,7 @@
           </Key>
           <Property Name="BookID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PublishYear" Type="int" />
         </EntityType>
         <EntityType Name="BookAuthor">
           <Key>
@@ -38,7 +39,7 @@
           <Property Name="AuthorID" Type="bigint" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'LibNet.dbo.BookLocation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'sandbox.dbo.BookLocation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="BookLocation">
           <Key>
             <PropertyRef Name="BookID" />
@@ -275,6 +276,7 @@ warning 6002: The table/view 'LibNet.dbo.BookLocation' does not have a primary k
           <NavigationProperty Name="BookLocation" Relationship="Self.FK_BookLocation_Book" FromRole="Book" ToRole="BookLocation" />
           <NavigationProperty Name="BookPurchase" Relationship="Self.FK_BookPurchase_Book" FromRole="Book" ToRole="BookPurchase" />
           <NavigationProperty Name="BookRent" Relationship="Self.FK_BookRent_Book" FromRole="Book" ToRole="BookRent" />
+          <Property Name="PublishYear" Type="Int32" />
         </EntityType>
         <EntityType Name="BookAuthor">
           <Key>
@@ -539,6 +541,7 @@ warning 6002: The table/view 'LibNet.dbo.BookLocation' does not have a primary k
           <EntitySetMapping Name="Book">
             <EntityTypeMapping TypeName="LibNetModel.Book">
               <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="PublishYear" ColumnName="PublishYear" />
                 <ScalarProperty Name="BookID" ColumnName="BookID" />
                 <ScalarProperty Name="BookName" ColumnName="BookName" />
               </MappingFragment>
