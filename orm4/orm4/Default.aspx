@@ -14,11 +14,10 @@
                     <asp:LoginName ID="LoginName1" runat="server" />
                     <br />
                     <br />
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/MemberPages/Members.aspx">Members page</asp:HyperLink>
                 </LoggedInTemplate>
             </asp:LoginView>
         <br />
-            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Login.aspx" />
+            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/LoginPage.aspx" />
         <br />
 
 </asp:Content>

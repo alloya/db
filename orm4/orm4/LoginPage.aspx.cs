@@ -32,11 +32,6 @@ namespace orm4
 		{
 			using (LibNetEntities db = new LibNetEntities())
 			{
-				Console.WriteLine(db.Database.Connection.ConnectionString);
-			}
-			using (LibNetEntities db = new LibNetEntities())
-			{
-				Console.WriteLine(db.AdminInfo.Any(x => x.AdminLogin == userName && x.AdminPassword == password));
 				return db.AdminInfo.Any(x => x.AdminLogin == userName && x.AdminPassword == password);
 			}
 		}
