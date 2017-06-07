@@ -5,3 +5,14 @@
     font-size: 15px;
     line-height: 1.3;
 }
+
+#Content2 label {
+    width: 120px;
+    display: inline-block;
+}
+
+#Content2 input {
+    margin: 2px;
+    margin-left: 4px;
+    width: 150px;
+}

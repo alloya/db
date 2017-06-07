@@ -23,6 +23,7 @@
         <AssociationConnector Association="LibNetModel.FK_BookRent_User" ManuallyRouted="false" />
         <AssociationConnector Association="LibNetModel.FK_BookRent_Library" ManuallyRouted="false" />
         <EntityTypeShape EntityType="LibNetModel.AdminInfo" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="LibNetModel.Users" Width="1.5" PointX="6.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -36,6 +36,7 @@ namespace orm4
         public virtual DbSet<UserInfo> UserInfo { get; set; }
         public virtual DbSet<BookLocation> BookLocation { get; set; }
         public virtual DbSet<AdminInfo> AdminInfo { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     
         public virtual ObjectResult<CheckUser_Result> CheckUser(string username, string password)
         {

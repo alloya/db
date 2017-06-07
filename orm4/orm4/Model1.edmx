@@ -87,6 +87,16 @@ warning 6002: The table/view 'sandbox.dbo.BookLocation' does not have a primary 
           <Property Name="UserRegDate" Type="date" Nullable="false" />
           <Property Name="BirthDate" Type="date" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
         <Association Name="FK_BookAuthor_Author">
           <End Role="Author" Type="Self.Author" Multiplicity="1" />
           <End Role="BookAuthor" Type="Self.BookAuthor" Multiplicity="*" />
@@ -208,6 +218,7 @@ warning 6002: The table/view 'sandbox.dbo.BookLocation' does not have a primary 
           <EntitySet Name="BookRent" EntityType="Self.BookRent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Library" EntityType="Self.Library" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BookLocation" EntityType="Self.BookLocation" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [BookLocation].[BookID] AS [BookID], 
@@ -508,6 +519,7 @@ warning 6002: The table/view 'sandbox.dbo.BookLocation' does not have a primary 
             <Parameter Name="username" Mode="In" Type="String" />
             <Parameter Name="password" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="Users" EntityType="LibNetModel.Users" />
         </EntityContainer>
         <EntityType Name="AdminInfo">
           <Key>
@@ -522,6 +534,16 @@ warning 6002: The table/view 'sandbox.dbo.BookLocation' does not have a primary 
           <Property Type="String" Name="AdminLogin" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="AdminPassword" Nullable="false" MaxLength="20" />
         </ComplexType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -626,6 +648,17 @@ warning 6002: The table/view 'sandbox.dbo.BookLocation' does not have a primary 
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="Check_User" FunctionName="LibNetModel.Store.CheckUser" />
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="LibNetModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
