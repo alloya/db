@@ -16,14 +16,21 @@
             </tr>
         </ItemTemplate>
     </asp:ListView>
+    <br />
     <label>Первое задание:</label>
-        <asp:Button ID="Button1" runat="server" Text="Button"  OnClick="Button1_Click"/>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <div class ="task">ФИО всех пользователей, которые брали книги авторов родившихся до 1900 года.</div>
+        <asp:Button ID="Button1" runat="server" Text="Найти"  OnClick="Button1_Click"/>
+        <asp:Label ID="Label1" runat="server" Text="Нажми на кнопку, получишь результат"></asp:Label>
+    <br />
     <br />
         <label>Второе задание:</label>
-        <asp:Button ID="Button2" runat="server" Text="Button"  OnClick="Button2_Click"/>
+    <div class ="task">Название всех книг, купленных в марте 2003 года, и их стоимость.</div>
+        <asp:Button ID="Button2" runat="server" Text="Найти"  OnClick="Button2_Click"/>
+        <asp:Label ID="Label2" runat="server" Text="Нажми на кнопку, получишь результат"></asp:Label>
+    <br />
     <br />
         <label>Третье задание:</label>
-        <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
-        <label id="query3"></label>
+    <div class ="task">Книги, которые у пользователей на руках и у которых больше двух авторов.</div>
+        <asp:Button ID="Button3" runat="server" Text="Найти" OnClick="Button3_Click" />
+        <asp:Label ID="Label3" runat="server" Text="Нажми на кнопку, получишь результат"></asp:Label>
 </asp:Content>

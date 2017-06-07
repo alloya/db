@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using orm4.Models;
 
 namespace orm4
 {
@@ -75,14 +76,5 @@ namespace orm4
 				dbContext.SaveChanges();
 			}
 		}
-	}
-
-	public class BookViewModel
-	{
-		public long BookID { get; set; }
-		public string BookName { get; set; }
-		public string AuthorName { get; set; }
-		public int? PublishYear { get; set; }
-		public string BookLocation { get; set; }
 	}
 }

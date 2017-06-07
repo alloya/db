@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BookList.aspx.cs" Inherits="orm4.BookList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:ListView ID="ListView1" runat="server" ItemType="orm4.BookViewModel"
+    <asp:ListView ID="ListView1" runat="server" ItemType="orm4.Models.BookViewModel"
             SelectMethod="GetBooks"
             InsertMethod="InsertBook" DataKeyNames="BookId">
         <LayoutTemplate>

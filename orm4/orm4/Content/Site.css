@@ -35,7 +35,10 @@ button[type=submit] {
     padding: 5px;
 }
 
-#ListView1 label {
-    width: 120px;
-    display: inline-block;
+.task {
+    width: 660px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    font-size: 15px;
+    line-height: 1.3;
 }
