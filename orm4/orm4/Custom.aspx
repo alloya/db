@@ -1,21 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Custom.aspx.cs" Inherits="orm4.Custom" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <asp:ListView ID="ListView1" runat="server" ItemType="orm4.Custom">
-        <LayoutTemplate>
-            <table>
-                <tr>
-
-                </tr>
-                <tr id="itemPlaceholder" runat="server"></tr>
-            </table>
-        </LayoutTemplate>
-
-        <ItemTemplate>
-            <tr>
-
-            </tr>
-        </ItemTemplate>
     </asp:ListView>
+    <br />
     <br />
     <label>Первое задание:</label>
     <div class ="task">ФИО всех пользователей, которые брали книги авторов родившихся до 1900 года.</div>

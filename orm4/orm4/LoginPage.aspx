@@ -3,7 +3,5 @@
     <asp:Login ID="Login1" 
         runat="server" 
         OnAuthenticate="ValidateUser" DestinationPageUrl="~/Default.aspx">
-         <%--InstructionText="Enter your user name and password to log in." DestinationPageUrl="~/Default.aspx">
-        <InstructionTextStyle Font-Bold="True" ForeColor="#E0E0E0" BackColor="Gray"></InstructionTextStyle>--%>
     </asp:Login>
 </asp:Content>
